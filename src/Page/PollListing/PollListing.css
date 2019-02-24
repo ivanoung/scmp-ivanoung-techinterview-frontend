@@ -16,11 +16,11 @@
 
 /* Structure style - following heirchery */
 .poll {
-    /* display: flex;
-    justify-content: space-between; */
-    /* width: 100%; */
     align-items: center;
 }
+
+
+
 
 .poll__chart {
     /* max-width: 400px; */

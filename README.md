@@ -49,9 +49,14 @@ Within the 4-hour mark, I've completed the following tasks:
 -   Styling
 -   Responsive (Mobile/Desktop)
 
-Things that's yet to be completed are:
+Things that's yet to be completed, and I could've done better, are:
 
 -   Dynamic pathings and routing
 -   Test cases
 -   Rest API
 -   Database storage
+
+### Possible exceptions
+
+-   First date not today
+-   More than 5 poll listing

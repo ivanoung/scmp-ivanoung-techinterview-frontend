@@ -5,10 +5,9 @@ import { ResponsiveContainer, PieChart, Pie } from "recharts";
 // Importing styling and static assets
 import { Jumbotron, Container, Row, Col } from "reactstrap";
 import "./PollListing.css";
-import Card from "reactstrap/lib/Card";
-import pieIcon from "./pieIcon.png";
 
 // Importing presentation components
+import PollListingCard from "../../Components/PollListingCard/PollListingCard";
 
 // Importing assisting utility functions
 // Importing interfaces from module
@@ -23,14 +22,113 @@ const data01 = [
     { name: "Group B", value: 300 }
 ];
 
-const EXAMPLE_DATA = [
+const testdata = [
     {
-        name: "example1",
-        value: 23.4
+        id: 1,
+        title: "Is bitcoin worth the time and money that mining requires?",
+        publishedDate: 1516605447,
+        answer: {
+            type: "Single",
+            options: [
+                {
+                    id: 1,
+                    label: "Yes"
+                },
+                {
+                    id: 2,
+                    label: "No"
+                }
+            ]
+        }
     },
     {
-        name: "example2",
-        value: 76.6
+        id: 2,
+        title: "Should chatbots replace humans in customer service jobs?",
+        publishedDate: 1516000647,
+        answer: {
+            type: "Single",
+            options: [
+                {
+                    id: 3,
+                    label: "Yes"
+                },
+                {
+                    id: 4,
+                    label: "No"
+                }
+            ]
+        }
+    },
+    {
+        id: 3,
+        title: "How are we feeling about 2018?",
+        publishedDate: 1515568647,
+        answer: {
+            type: "Single",
+            options: [
+                {
+                    id: 5,
+                    label: "Hopeful"
+                },
+                {
+                    id: 6,
+                    label: "Doubtful"
+                }
+            ]
+        }
+    },
+    {
+        id: 4,
+        title:
+            "Which country/region have you ever visited? (Select all that applies)",
+        publishedDate: 1515482247,
+        answer: {
+            type: "Multi",
+            options: [
+                {
+                    id: 7,
+                    label: "Hong Kong"
+                },
+                {
+                    id: 8,
+                    label: "China"
+                },
+                {
+                    id: 9,
+                    label: "Australia"
+                },
+                {
+                    id: 10,
+                    label: "Thailand"
+                },
+                {
+                    id: 11,
+                    label: "Korea"
+                },
+                {
+                    id: 12,
+                    label: "Japan"
+                }
+            ]
+        }
+    },
+    {
+        id: 5,
+        title: "Will new benefits encourage you to study or work in mainland?",
+        publishedDate: 1515309447,
+        answer: {
+            type: "Single",
+            options: [
+                {
+                    id: 13,
+                    label: "Yes"
+                },
+                {
+                    id: 14,
+                    label: "No"
+                }
+            ]
+        }
     }
 ];
 
@@ -96,40 +194,11 @@ export default class PollListing extends React.Component {
                 </Jumbotron>
 
                 {/* Start of bottom list */}
-                <Container>
+                <Container className="">
                     <Row>
-                        <Col xs="12" sm="6">
-                            <Card>
-                                <Row>
-                                    <Col xs="3">
-                                        <img src={pieIcon} alt="" />
-                                    </Col>
-                                    <Col xs="9">
-                                        <h3>15 Jan,2018</h3>
-                                        <p>
-                                            Should chatbots replace bumans in
-                                            customer service jobs?
-                                        </p>
-                                    </Col>
-                                </Row>
-                            </Card>
-                        </Col>
-                        <Col xs="12" sm="6">
-                            <Card>
-                                <Row>
-                                    <Col xs="3">
-                                        <img src={pieIcon} alt="" />
-                                    </Col>
-                                    <Col xs="9">
-                                        <h3>15 Jan,2018</h3>
-                                        <p>
-                                            Should chatbots replace bumans in
-                                            customer service jobs?
-                                        </p>
-                                    </Col>
-                                </Row>
-                            </Card>
-                        </Col>
+                        {testdata.map((poll, i) => (
+                            <PollListingCard {...poll} />
+                        ))}
                     </Row>
                 </Container>
             </div>
