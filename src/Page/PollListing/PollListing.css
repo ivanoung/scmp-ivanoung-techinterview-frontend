@@ -22,11 +22,6 @@
     align-items: center;
 }
 
-.poll__buttons {
-    display: flex;
-    flex-direction: column;
-}
-
 .poll__chart {
     /* max-width: 400px; */
     max-width: 800px;

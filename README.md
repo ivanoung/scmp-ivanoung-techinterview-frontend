@@ -1,44 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SCMP - Ivan Oung's Technical Test
 
-## Available Scripts
+## Tech stack
 
-In the project directory, you can run:
+Tech stack applied to the application.
 
-### `npm start`
+-   Frontend: React, Typescript & Redux
+-   Backend: Node.js
+-   Storage: PostgreSQL
+-   Charting : Rechart
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Running the programm
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+To run the application, visit the live demo at: [scmpivan.surge.sh](http://scmpivan.surge.sh/)
 
-### `npm test`
+---OR---
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To build the examples locally, run:
 
-### `npm run build`
+```bash
+yarn install
+yarn start
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Then open [`localhost:3000`](http://localhost:3000) in a browser.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Code infrastructure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The infrastructure of the codes adhere to the principle of OOP. Pages (views) and reusable components are organized into seperate folders and directories.
 
-### `npm run eject`
+Although there was not enough time to implement Sass for a cleaner format for styling sheets, BEM was still choosen to be the naming convention for the styling sheets.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For best maintainability and refactorability, routes and states are isolated under their own folders, just as how I do with other projects. This implementation is best when it comes to scalibility.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Challenges, progress and completion
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Challenges
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Due to the conflict and updates of both chart.js and rechart packages, it took more time to solve the problem. Since the charting is one of the most important features of the application. There is no other way around to sped up the process.
 
-## Learn More
+Also, React routing and unit testing with jest are fields where I'm not yet comfortable with, where dynamic pathing with parameters and component unit testing will require a bit more time for full implementation.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Progress and completion
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Within the 4-hour mark, I've completed the following tasks:
+
+-   Webpage
+-   Charting
+-   Styling
+-   Responsive (Mobile/Desktop)
+
+Things that's yet to be completed are:
+
+-   Dynamic pathings and routing
+-   Test cases
+-   Rest API
+-   Database storage

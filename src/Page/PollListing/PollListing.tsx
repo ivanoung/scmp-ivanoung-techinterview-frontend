@@ -20,11 +20,7 @@ import pieIcon from "./pieIcon.png";
 // Test data
 const data01 = [
     { name: "Group A", value: 400 },
-    { name: "Group B", value: 300 },
-    { name: "Group C", value: 300 },
-    { name: "Group D", value: 200 },
-    { name: "Group E", value: 278 },
-    { name: "Group F", value: 189 }
+    { name: "Group B", value: 300 }
 ];
 
 const EXAMPLE_DATA = [
@@ -57,7 +53,7 @@ export default class PollListing extends React.Component {
                     <Container className="poll">
                         <Row>
                             <Col
-                                className="poll__buttons d-flex align-items-center"
+                                className="d-flex align-items-center"
                                 xs="12"
                                 sm="8"
                                 md="8"
