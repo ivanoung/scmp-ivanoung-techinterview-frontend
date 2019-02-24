@@ -1,5 +1,12 @@
 import * as History from "history";
 
+// Poll listing
+export interface IPollListingStates {
+    totalPollResult: IPollResult[];
+    testdata: any;
+}
+
+// Poll Listing Cards
 export interface IPollListingCardProps {
     // handling routes
     history: History.History;
@@ -8,18 +15,27 @@ export interface IPollListingCardProps {
     id: number;
     title: string;
     publishedDate: number;
-    answer: IPollListingCardPropsAnswer;
+    answer: IPollResultAnswer;
 }
 
 export interface IPollListingCardStates {
     currentDate: Date;
 }
 
-export interface IPollListingCardPropsAnswer {
-    type: string;
-    options: IPollListingCardPropsAnswerOptions[];
+// Raw data json shape
+export interface IPollResult {
+    //Input props
+    id: number;
+    title: string;
+    publishedDate: number;
+    answer: IPollResultAnswer;
 }
-export interface IPollListingCardPropsAnswerOptions {
+export interface IPollResultAnswer {
+    type: string;
+    options: IPollResultOptions[];
+}
+export interface IPollResultOptions {
     id: number;
     label: string;
+    value: number;
 }

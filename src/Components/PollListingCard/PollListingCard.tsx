@@ -41,7 +41,7 @@ class PollListingCard extends React.Component<
                         <img src={pieIcon} alt="" />
                     </div>
                     <div className="pollCard__right">
-                        <h3>{this.state.currentDate.toLocaleString()}</h3>
+                        <h3>{this.state.currentDate.toDateString()}</h3>
                         <p>{this.props.title}</p>
                     </div>
                 </div>

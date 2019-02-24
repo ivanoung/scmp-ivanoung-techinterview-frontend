@@ -51,6 +51,7 @@ Within the 4-hour mark, I've completed the following tasks:
 
 Things that's yet to be completed, and I could've done better, are:
 
+-   Voting
 -   Dynamic pathings and routing
 -   Test cases
 -   Rest API
