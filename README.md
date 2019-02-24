@@ -1,19 +1,15 @@
 # SCMP - Ivan Oung's Technical Test
 
-## Tech stack
+## Tech stack selection
 
 Tech stack applied to the application.
 
 -   Frontend: React, Typescript & Redux
+-   Charting : Rechart
 -   Backend: Node.js
 -   Storage: PostgreSQL
--   Charting : Rechart
 
 ## Running the programm
-
-To run the application, visit the live demo at: [scmpivan.surge.sh](http://scmpivan.surge.sh/)
-
----OR---
 
 To build the examples locally, run:
 
@@ -51,13 +47,20 @@ Within the 4-hour mark, I've completed the following tasks:
 
 Things that's yet to be completed, and I could've done better, are:
 
--   Voting
--   Dynamic pathings and routing
--   Test cases
--   Rest API
--   Database storage
+#### Voting
 
-### Possible exceptions
+The voting is better handle with Redux, a global centralized state management hub. With redux implementation, pages and components can be reduced into simple presentational component and let the dispatch handle all the state changes and tracking.
 
--   First date not today
--   More than 5 poll listing
+#### Chart rendering on state change
+
+The state does update when the user votes, however, futher investigation is required to understand the reason why the chart does not re-render after state change.
+
+#### Dynamic vote options, pathings and routing
+
+The data structure of poll.json suggests that there can me more than 2 options in a poll, and the poll list can grow or shrink upon staffs' request. Improvement based on the current codes is to apply dynamic routing by allowing component accepts different props with the help of React Routes and Redux. The result is easily achieveable by iterating the list of polls with the help of **Array.map.reduce**, same goes with voting options.
+
+#### Test cases, Rest API, Database storage
+
+Regretfully, the test was not fully completed before the time limit. However, Rest API and database storage were being implemented in other projects. Please find this [Github page](https://github.com/cheungdzinyung/DealingRoom) of a previous project on the related request.
+
+[https://github.com/cheungdzinyung/DealingRoom](https://github.com/cheungdzinyung/DealingRoom)
