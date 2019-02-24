@@ -9,7 +9,11 @@ export default class PollRoutes extends React.Component {
         return (
             <div>
                 <Switch>
-                    {/* <Route path="/" exact={true} component={PollListing} /> */}
+                    <Route
+                        path="/polls/1"
+                        exact={true}
+                        component={PollListing}
+                    />
                     <Route path="/" exact={true} component={SinglePoll} />
                 </Switch>
             </div>
