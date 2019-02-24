@@ -1,6 +1,5 @@
 // Importing modules from library
 import * as React from "react";
-import * as History from "history";
 
 // Importing styling and static assets
 import { Col } from "reactstrap";
@@ -11,34 +10,14 @@ import pieIcon from "./pieIcon.png";
 
 // Importing assisting utility functions
 // Importing interfaces from module
-
-// States and Props
-interface IPollListingCardProps {
-    // handling routes
-    history: History.History;
-
-    //Input props
-    id: number;
-    title: string;
-    publishedDate: number;
-    answer: IPollListingCardPropsAnswer;
-}
-
-interface IPollListingCardStates {
-    currentDate: Date;
-}
-
-interface IPollListingCardPropsAnswer {
-    type: string;
-    options: IPollListingCardPropsAnswerOptions[];
-}
-interface IPollListingCardPropsAnswerOptions {
-    id: number;
-    label: string;
-}
+import {
+    IPollListingCardProps,
+    IPollListingCardStates
+} from "../../Interfaces/interfaces";
+import { withRouter } from "react-router";
 
 // Component
-export default class PollListingCard extends React.Component<
+class PollListingCard extends React.Component<
     IPollListingCardProps,
     IPollListingCardStates
 > {
@@ -70,3 +49,5 @@ export default class PollListingCard extends React.Component<
         );
     }
 }
+
+export default withRouter(PollListingCard as any);
