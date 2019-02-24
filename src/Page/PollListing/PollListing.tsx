@@ -41,12 +41,12 @@ export default class PollListing extends React.Component<
                             {
                                 id: 1,
                                 label: "Yes",
-                                value: 0
+                                value: 12
                             },
                             {
                                 id: 2,
                                 label: "No",
-                                value: 0
+                                value: 2
                             }
                         ]
                     }
@@ -62,12 +62,12 @@ export default class PollListing extends React.Component<
                             {
                                 id: 3,
                                 label: "Yes",
-                                value: 0
+                                value: 3
                             },
                             {
                                 id: 4,
                                 label: "No",
-                                value: 0
+                                value: 4
                             }
                         ]
                     }
@@ -82,12 +82,12 @@ export default class PollListing extends React.Component<
                             {
                                 id: 5,
                                 label: "Hopeful",
-                                value: 0
+                                value: 5
                             },
                             {
                                 id: 6,
                                 label: "Doubtful",
-                                value: 0
+                                value: 6
                             }
                         ]
                     }
@@ -103,32 +103,32 @@ export default class PollListing extends React.Component<
                             {
                                 id: 7,
                                 label: "Hong Kong",
-                                value: 0
+                                value: 2
                             },
                             {
                                 id: 8,
                                 label: "China",
-                                value: 0
+                                value: 2
                             },
                             {
                                 id: 9,
                                 label: "Australia",
-                                value: 0
+                                value: 2
                             },
                             {
                                 id: 10,
                                 label: "Thailand",
-                                value: 0
+                                value: 2
                             },
                             {
                                 id: 11,
                                 label: "Korea",
-                                value: 0
+                                value: 2
                             },
                             {
                                 id: 12,
                                 label: "Japan",
-                                value: 0
+                                value: 2
                             }
                         ]
                     }
@@ -144,12 +144,12 @@ export default class PollListing extends React.Component<
                             {
                                 id: 13,
                                 label: "Yes",
-                                value: 0
+                                value: 3
                             },
                             {
                                 id: 14,
                                 label: "No",
-                                value: 0
+                                value: 9
                             }
                         ]
                     }
@@ -176,72 +176,6 @@ export default class PollListing extends React.Component<
     public render() {
         return (
             <div>
-                {/* <Jumbotron>
-                    <Container>
-                        <h1 className="display-3">Today's Poll</h1>
-                        <h3 className="">
-                            {this.state.totalPollResult[0].title}
-                        </h3>
-                        <h3 className="dates">
-                            {new Date(
-                                1000 *
-                                    this.state.totalPollResult[0].publishedDate
-                            ).toDateString()}
-                        </h3>
-                    </Container>
-
-                    <Container className="poll">
-                        <Row>
-                            <Col
-                                className="d-flex align-items-center"
-                                xs="12"
-                                sm="8"
-                            >
-                                <button
-                                    onClick={this.voteYes}
-                                    className="pollbutton yesbutton"
-                                >
-                                    Yes
-                                </button>
-                                <button
-                                    onClick={this.voteNo}
-                                    className="pollbutton nobutton"
-                                >
-                                    No
-                                </button>
-                            </Col>
-                            <Col
-                                xs="12"
-                                sm="4"
-                                className="poll__chart d-flex align-items-center"
-                            >
-                                <ResponsiveContainer width="100%" height={300}>
-                                    <PieChart>
-                                        <Pie
-                                            dataKey="value"
-                                            isAnimationActive={false}
-                                            data={
-                                                this.state.totalPollResult[0]
-                                                    .answer.options
-                                            }
-                                            outerRadius={100}
-                                            fill="#001246"
-                                            label
-                                        />
-                                    </PieChart>
-                                </ResponsiveContainer>
-                            </Col>
-                        </Row>
-                    </Container>
-                    <Container>
-                        <span>
-                            Total number of values recorded:{" "}
-                            {this.state.totalPollResult[0].answer.options
-                                .map(item => item.value)
-                                .reduce((a, b) => a + b)}
-                        </span>
-                    </Container>
-                </Jumbotron> */}
                 <PollVotingCard
                     pollResult={this.state.totalPollResult[0]}
                     voteNo={this.voteNo}

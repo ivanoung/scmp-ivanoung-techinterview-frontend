@@ -16,14 +16,8 @@
 
 /* Structure style - following heirchery */
 .poll__body {
-    /* display: flex;
-    justify-content: space-between; */
-    /* width: 100%; */
     align-items: center;
 }
-
-
-
 
 .poll__header {
     margin: 5vh 0;
@@ -37,4 +31,8 @@
 
 .poll__body__card {
     padding: 3rem;
+}
+
+.poll__buttons {
+    justify-content: center;
 }
