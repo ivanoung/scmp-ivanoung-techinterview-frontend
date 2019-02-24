@@ -3,7 +3,7 @@
     border: 0;
     color: white;
     padding: 10px 40px;
-    /* max-width: 200px; */
+    max-width: 150px;
 }
 
 .yesbutton {
@@ -15,26 +15,19 @@
 }
 
 /* Structure style - following heirchery */
-.poll__body {
+.poll {
     /* display: flex;
     justify-content: space-between; */
     /* width: 100%; */
     align-items: center;
 }
 
-
-
-
-.poll__header {
-    margin: 5vh 0;
+.poll__buttons {
+    display: flex;
+    flex-direction: column;
 }
 
-.poll__header__date {
-
-    text-align: right;
-}
-
-
-.poll__body__card {
-    padding: 3rem;
+.poll__chart {
+    /* max-width: 400px; */
+    max-width: 800px;
 }

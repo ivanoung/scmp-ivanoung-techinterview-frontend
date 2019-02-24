@@ -33,18 +33,22 @@ export default class SinglePoll extends React.Component {
 
     public render() {
         return (
-            <div>
-                <Container>
-                    <h1 className="">
+            <div className="poll">
+                <Container className="poll__header">
+                    <h1 className="poll__header__title">
                         In bitcoin worth the time and money that mining
                         requires?
                     </h1>
                     <hr />
-                    <span>PUBLISHED: Wednesday, 17 January, 2018, 2:07pm</span>
+                    <div className="poll__header__date">
+                        <span className="poll__header__date__text">
+                            PUBLISHED: Wednesday, 17 January, 2018, 2:07pm
+                        </span>
+                    </div>
                 </Container>
 
-                <Container className="poll">
-                    <Card className="poll__card bg-light">
+                <Container className="poll__body">
+                    <Card className="poll__body__card bg-light">
                         <Row>
                             <Col
                                 className="poll__buttons d-flex align-items-center"
