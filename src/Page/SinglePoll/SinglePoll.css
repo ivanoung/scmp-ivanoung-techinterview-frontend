@@ -1,0 +1,29 @@
+/* Sharing style - no structure */
+.pollbutton {
+    border: 0;
+    color: white;
+    padding: 10px 40px;
+    /* max-width: 200px; */
+}
+
+.yesbutton {
+    background-color: #001246;
+}
+
+.nobutton {
+    background-color: #ffca05;
+}
+
+/* Structure style - following heirchery */
+.poll {
+    /* display: flex;
+    justify-content: space-between; */
+    /* width: 100%; */
+    align-items: center;
+}
+
+
+
+.poll__card {
+    padding: 3rem;
+}
