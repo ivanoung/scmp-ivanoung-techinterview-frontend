@@ -8,11 +8,11 @@ import "./PollListing.css";
 
 // Importing presentation components
 import PollListingCard from "../../Components/PollListingCard/PollListingCard";
-import { Doughnut } from "react-chartjs-2";
 
 // Importing assisting utility functions
 // Importing interfaces from module
 import { IPollListingStates } from "../../Interfaces/interfaces";
+import PollVotingCard from "../../Components/PollVotingCard/PollVotingCard";
 
 // States and Props
 // interface ITemplateProps {}
@@ -29,7 +29,6 @@ export default class PollListing extends React.Component<
         super(props);
 
         this.state = {
-            testdata: [{ name: "Hi", value: 10 }, { name: "Hi", value: 20 }],
             totalPollResult: [
                 {
                     id: 1,
@@ -165,15 +164,7 @@ export default class PollListing extends React.Component<
         newState.totalPollResult[0].answer.options[0].value =
             newState.totalPollResult[0].answer.options[0].value + 1;
         this.setState(newState);
-        this.forceUpdate();
     };
-
-    // public voteYes = () => {
-    //     let newState = Object.assign({}, this.state.testdata);
-    //     newState[0].value = newState[0].value + 1;
-    //     this.setState({ testdata: newState });
-    //     this.forceUpdate();
-    // };
 
     public voteNo = () => {
         let newState = Object.assign({}, this.state);
@@ -185,7 +176,7 @@ export default class PollListing extends React.Component<
     public render() {
         return (
             <div>
-                <Jumbotron>
+                {/* <Jumbotron>
                     <Container>
                         <h1 className="display-3">Today's Poll</h1>
                         <h3 className="">
@@ -229,7 +220,6 @@ export default class PollListing extends React.Component<
                                         <Pie
                                             dataKey="value"
                                             isAnimationActive={false}
-                                            // data={this.state.testdata}
                                             data={
                                                 this.state.totalPollResult[0]
                                                     .answer.options
@@ -251,8 +241,12 @@ export default class PollListing extends React.Component<
                                 .reduce((a, b) => a + b)}
                         </span>
                     </Container>
-                </Jumbotron>
-
+                </Jumbotron> */}
+                <PollVotingCard
+                    pollResult={this.state.totalPollResult[0]}
+                    voteNo={this.voteNo}
+                    voteYes={this.voteYes}
+                />
                 {/* Start of bottom list */}
                 <Container className="">
                     <Row>

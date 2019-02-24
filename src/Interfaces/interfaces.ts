@@ -3,7 +3,6 @@ import * as History from "history";
 // Poll listing
 export interface IPollListingStates {
     totalPollResult: IPollResult[];
-    testdata: any;
 }
 
 // Poll Listing Cards
@@ -20,6 +19,13 @@ export interface IPollListingCardProps {
 
 export interface IPollListingCardStates {
     currentDate: Date;
+}
+
+// Poll Voting Card (Big voting banner with button and chart)
+export interface IPollVotingCardProps {
+    pollResult: IPollResult;
+    voteYes: any;
+    voteNo: any;
 }
 
 // Raw data json shape
